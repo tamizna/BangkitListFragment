@@ -9,6 +9,7 @@ class ShowFragmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_fragment)
 
+        // Add fragment in activity
         supportFragmentManager
             .beginTransaction()
             .add(R.id.frame_container, HomeFragment())

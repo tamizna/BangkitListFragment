@@ -13,6 +13,7 @@ class RvActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rv)
 
+        // data source
         val list = listOf(
             Fruit("Apple", "This is Apple", R.drawable.ic_apple),
             Fruit("Banana", "This is Banana", R.drawable.ic_bananas),
@@ -23,14 +24,23 @@ class RvActivity : AppCompatActivity() {
 
         val rvFruits: RecyclerView =
             findViewById(R.id.rv_fruits)
-        val listFruitAdapter = ListFruitAdapter(list) { fruit ->
+
+        // define adapter for recycler view with data source & on click listener function
+        val listFruitAdapter = ListFruitAdapter(list) {
+            // handle on click listener using lambda
+                fruit ->
             Toast.makeText(this, "You choose ${fruit.name}", Toast.LENGTH_SHORT).show()
 
+            // send data in recycler view using parcelable
             val intent = Intent(this, DetailFruitActivity::class.java)
             intent.putExtra("FRUIT_OBJECT", fruit)
             startActivity(intent)
         }
-        rvFruits.adapter = listFruitAdapter
-        rvFruits.layoutManager = LinearLayoutManager(this)
+
+        // set adapter and layout manager for recycler view
+        rvFruits.apply {
+            layoutManager = LinearLayoutManager(this@RvActivity)
+            adapter = listFruitAdapter
+        }
     }
 }

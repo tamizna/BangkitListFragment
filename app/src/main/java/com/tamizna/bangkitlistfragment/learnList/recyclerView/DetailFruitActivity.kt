@@ -21,6 +21,7 @@ class DetailFruitActivity : AppCompatActivity() {
         txtFruitDesc = findViewById(R.id.txt_fruit_desc)
         imgFruit = findViewById(R.id.img_fruit)
 
+        // Receive data using parcelable
         val fruits = intent.getParcelableExtra<Fruit>("FRUIT_OBJECT") as Fruit
 
         txtFruitName.text = fruits.name

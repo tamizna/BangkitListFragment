@@ -28,6 +28,7 @@ class DetailFragment : Fragment() {
 
         val txtCategory: TextView = view.findViewById(R.id.txt_category)
 
+        // receive data in fragment
         if (arguments != null) {
             val categoryName = arguments?.getString(EXTRA_NAME)
             txtCategory.text = categoryName

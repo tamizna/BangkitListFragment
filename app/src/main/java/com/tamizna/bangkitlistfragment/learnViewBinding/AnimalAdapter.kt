@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tamizna.bangkitlistfragment.databinding.ItemRowAnimalBinding
 
+// using view binding in adapter
 class AnimalAdapter(private var animals: List<String>) :
     RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>() {
 

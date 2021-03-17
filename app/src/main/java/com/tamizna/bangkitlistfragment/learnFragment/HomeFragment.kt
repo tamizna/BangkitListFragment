@@ -26,12 +26,13 @@ class HomeFragment : Fragment() {
         button.setOnClickListener {
             Toast.makeText(activity, "Hello", Toast.LENGTH_SHORT).show()
 
+            // send data to another fragment
             val detailCategoryFragment = DetailFragment()
             val bundle = Bundle()
             bundle.putString(DetailFragment.EXTRA_NAME, "Lifestyle")
             detailCategoryFragment.arguments = bundle
 
-
+            // Add new fragment at fragment
             childFragmentManager.beginTransaction().apply {
                 replace(
                     R.id.child_frame_layout,

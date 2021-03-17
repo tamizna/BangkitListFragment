@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.tamizna.bangkitlistfragment.R
 
 class ListViewActivity : AppCompatActivity() {
+
+    // Data source
     private val fruits = arrayOf(
         "Apple",
         "Banana",
@@ -27,21 +29,24 @@ class ListViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list_view)
 
         listView = findViewById(R.id.lv_fruit)
+
+        // define adapter for list view (set item's layout and data source)
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_list_item_1,
             fruits
         )
+
+        // set adapter to list view
         listView.adapter = adapter
 
+        // set on click listener in list view
         listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-
             Toast.makeText(
                 this,
                 "${fruits[position]} clicked",
                 Toast.LENGTH_SHORT
             ).show()
-
         }
     }
 }
