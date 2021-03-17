@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BangkitListFragment</string>
+    <string name="list_view">List View</string>
+    <string name="recycler_view">Recycler View</string>
+    <string name="click_me">Click Me!</string>
+    <string name="outside_fragment">Outside Fragment</string>
+    <string name="inside_fragment">Inside Fragment</string>
+    <string name="fragment">Fragment</string>
+    <string name="animal_list">Animal List</string>
+    <string name="view_binding">View Binding</string>
+</resources>

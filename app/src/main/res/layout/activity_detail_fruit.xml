@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".learnList.recyclerView.DetailFruitActivity">
+
+    <ImageView
+        android:id="@+id/img_fruit"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_bananas" />
+
+    <TextView
+        android:id="@+id/txt_fruit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/img_fruit"
+        tools:text="Fruit's Name" />
+
+    <TextView
+        android:id="@+id/txt_fruit_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_fruit_name"
+        tools:text="Fruit's Description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
